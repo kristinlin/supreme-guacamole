@@ -2,18 +2,31 @@
 <html>
   <head>
     <title>WORK 14</title>
+    <style>
+
+      body {
+      padding: 10px;
+      }
+      
+      .chart div {
+      background-color: rgba(255, 0, 0, 0);
+      padding: 10px;
+      margin: 6px;
+      color: white;
+      }
+    </style>
   </head>
   <body>
-    <div style="padding: 10px 100px 10px">
-      <h1>2000 vs 2020 US Budget</h1>
-      <form>
-	<input id="00" type="button" value="2000">
-	<input id="20" type="button" value="2020">
-      </form>
-      <br>
-      <div>
-      </div>
-      <script src="index.js" type='text/javascript'></script>
+    <h1>2000 vs 2020 US Budget</h1>
+    <p>Data from <a href="http://federal-budget.insidegov.com">InsideGov</a></p>
+    <br>
+    <form>
+      <input id="toggle" type="button" value="TOGGLE">
+    </form>
+    <h3>SHOWING: </h3>
+    <div class="chart">
     </div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="index.js" type='text/javascript'></script>
   </body>
 </html>
