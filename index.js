@@ -18,6 +18,7 @@ var createBars = function() {
 
 //switch bars will change the width of the bars and the colors and the text
 var switchBars = function(e) {
+    
     bars.data(function(){
 	if (yr) {
 	    return data00;
@@ -37,9 +38,9 @@ var switchBars = function(e) {
 	    }
 	})
     	.style("width", function(e) {return e*10 + "px"; })
-    	.text(function(f){return f + "%";});
-    bars.data(labels).append("b").attr("style","float:left").text(function(d){return d;});
+    	.text(function(f, i){return labels[i] + ': ' + f + "%";});
 }
+
 
 //switch bars to the other year; changes the color and the text of "SHOWING"
 var toggle = function(e) {
