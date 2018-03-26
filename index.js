@@ -38,6 +38,7 @@ var switchBars = function(e) {
 	})
     	.style("width", function(e) {return e*10 + "px"; })
     	.text(function(f){return f + "%";});
+    bars.data(labels).append("b").attr("style","float:left").text(function(d){return d;});
 }
 
 //switch bars to the other year; changes the color and the text of "SHOWING"
